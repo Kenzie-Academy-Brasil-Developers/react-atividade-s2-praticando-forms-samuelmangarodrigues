@@ -1,0 +1,37 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form input {
+  margin: 6px;
+  border: 2px solid white;
+  font-size: 20px;
+  border-radius: 4px;
+  height: 24px;
+  width: 280px;
+  font-family: "Roboto", sans-serif;
+}
+.form input:hover {
+  border: 2px solid black;
+  transition: 0.5s;
+}
+.form button {
+  margin: 6px;
+  width: 140px;
+  height: 30px;
+  font-family: "Balsamiq Sans", cursive;
+  background-color: rgb(16, 16, 133);
+  color: grey;
+  border: 1px solid rgb(16, 16, 133);
+  border-radius: 4px;
+}
+.form button:hover {
+  background-color: blue;
+  color: white;
+  transition: 0.5s;
+}
+.form span {
+  color: red;
+  font-size: 15px;
+}
