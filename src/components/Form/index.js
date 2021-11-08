@@ -9,14 +9,14 @@ const Form = () => {
       .string()
       .required("Nome obrigatório")
       .max(18, "Nome deve ter no máximo 18 caracteres"),
-    email: yup.string().required("Email obrigatório"),
+    email: yup.string().required("Email obrigatório").email(),
     password: yup.string().required("Senha obrigatória").min(8),
     passconfirm: yup
       .string()
       .oneOf([yup.ref("password"), null], "As senhas estão diferentes"),
-    country: yup.string().required("Nome da cidade obrigatório"),
-    state: yup.string().required("Estado obrigatório"),
-    phone: yup.string().required("Telefone obrigatório"),
+    country: yup.string().required("Nome da cidade obrigatório").max(18),
+    state: yup.string().required("Estado obrigatório").max(18),
+    phone: yup.string().required("Telefone obrigatório").max(11),
   });
 
   const {
