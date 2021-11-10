@@ -2,8 +2,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css";
-
-const Form = () => {
+const Form = ({ setUsers, isCad }) => {
   const formSchema = yup.object().shape({
     name: yup
       .string()
@@ -27,7 +26,8 @@ const Form = () => {
     resolver: yupResolver(formSchema),
   });
   const onSubmitFuncition = (data) => {
-    console.log(data);
+    setUsers(data);
+    isCad();
   };
   return (
     <div>
